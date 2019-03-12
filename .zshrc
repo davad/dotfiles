@@ -58,8 +58,6 @@ zplug load
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ag="ag --color"
 
-alias latexmk="latexmk -pdf -pvc"
-
 # Nvidia CUDA library and binaries
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/
 export PATH=$PATH:/usr/local/cuda/bin
@@ -80,6 +78,10 @@ alias compass='docker run --rm -ti -v $(pwd):/app davad/compass'
 alias regen-gemfile='docker run --rm -v $(pwd):/usr/src/app -w /usr/src/app ruby:2.3 bundle install'
 alias rocketeer='docker run -ti --rm -v $(pwd):/app -v ~/.ssh:/root/.ssh grafikart/rocketeer'
 #alias php='docker run --rm -it -v $(pwd):/app alxsad/psysh'
+alias latexmk="latexmk -pdf -pvc"
+alias composer="docker run --rm --interactive --tty  --volume $(pwd):/app --user $(id -u):$(id -g) composer --ignore-platform-reqs --no-scripts"
+
+
 
 # added by Anaconda3 4.2.0 installer
 export PATH="$HOME/anaconda3/bin:$PATH"
