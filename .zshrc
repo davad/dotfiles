@@ -13,7 +13,7 @@ zplug "plugins/tmux", from:oh-my-zsh
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug "lib/history", from:oh-my-zsh
 
-#zplug "junegunn/fzf-bin", from:gh-r, at:0.17.5, as:command, use:"*linux*amd64*", rename-to:fzf
+zplug "junegunn/fzf-bin", from:gh-r, at:0.17.5, as:command, use:"*linux*amd64*", rename-to:fzf
 
 zplug "themes/mortalscumbag", from:oh-my-zsh
 
