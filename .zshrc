@@ -58,6 +58,8 @@ zplug load
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 [ -f ~/dotfiles/base16-gruvbox-dark-soft.config ] && source ~/dotfiles/base16-gruvbox-dark-soft.config
 
+eval $(dircolors ~/.dir_colors/dircolors)
+alias ls="ls --color"
 alias ag="ag --color"
 
 # Nvidia CUDA library and binaries
