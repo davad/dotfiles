@@ -65,7 +65,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/
 export PATH=$PATH:/usr/local/cuda/bin
 
 # Home dir bin
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/.local/bin
 
 # Android SDK
 export ANDROID_HOME=~/Android/sdk
@@ -81,12 +81,7 @@ alias regen-gemfile='docker run --rm -v $(pwd):/usr/src/app -w /usr/src/app ruby
 alias rocketeer='docker run -ti --rm -v $(pwd):/app -v ~/.ssh:/root/.ssh grafikart/rocketeer'
 #alias php='docker run --rm -it -v $(pwd):/app alxsad/psysh'
 alias latexmk="latexmk -pdf -pvc"
-alias composer="docker run --rm --interactive --tty  --volume $(pwd):/app --user $(id -u):$(id -g) composer --ignore-platform-reqs --no-scripts"
-
-
-
-# added by Anaconda3 4.2.0 installer
-export PATH="$HOME/anaconda3/bin:$PATH"
+alias composer="docker run --rm --interactive --tty  --volume $(pwd):/app --user $(id -u):$(id -g) composer"
 
 #export WORKON_HOME=~/PyEnvs
 #source /usr/local/bin/virtualenvwrapper.sh
@@ -100,8 +95,13 @@ export PATH="$GOPATH/bin:/usr/local/go/bin:$PATH"
 export NVM_DIR="/home/davad/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-source ~/anaconda3/bin/aws_zsh_completer.sh
+# source ~/anaconda3/bin/aws_zsh_completer.sh
 
 [ -f /usr/share/autojump/autojump.zsh ] && . /usr/share/autojump/autojump.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pyenv
+export PATH="$PATH:$HOME/.pyenv/bin"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
