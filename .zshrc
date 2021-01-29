@@ -56,7 +56,7 @@ zplug load
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-[ -f ~/dotfiles/base16-gruvbox-dark-soft.config ] && source ~/dotfiles/base16-gruvbox-dark-soft.config
+[ -f ~/dotfiles/base16-gruvbox-dark-medium.config ] && source ~/dotfiles/base16-gruvbox-dark-medium.config
 
 eval $(dircolors ~/.dir_colors/dircolors)
 alias ls="ls --color"
